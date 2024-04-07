@@ -23,20 +23,26 @@ export default function Home() {
         <ActionButtons>
         
             <ActionButton>
+            <Link href="/search">
                 <ActionButtonImage src="./Icons/Ride.png"/> 
-                <Link href="/search">Ride</Link>
+            </Link>
+            Ride
             </ActionButton>
           
 
             <ActionButton>
+            <Link href="/search">
               <ActionButtonImage src="./Icons/Wheels.png"/>
-              Wheels
+            </Link>
+            Wheels
             </ActionButton>
 
        
             <ActionButton>
+            <Link href="/search">
               <ActionButtonImage src="./Icons/Reserve.png"/>
-              Reserve
+            </Link>
+            Reserve
             </ActionButton>
 
         </ActionButtons>
@@ -85,7 +91,7 @@ rounded-lg text-xl
 transform hover:scale-95 transition
 `
 const ActionButtonImage = tw.img`
-h-3/5
+h-24
 `
 const InputButtons = tw.div`
 h-20 bg-gray-200 text-2xl p-4 mt-8 

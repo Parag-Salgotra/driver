@@ -12,8 +12,8 @@ const Confirm = () => {
     const router = useRouter();
     const { pickup, dropoff } = router.query;
 
-    const  [pickUpCoordinates, setPickUpCoordinates] = useState();
-    const  [dropoffCoordinates, setDropOffCoordinates] = useState();
+    const  [pickUpCoordinates, setPickUpCoordinates] = useState([0, 0]);
+    const  [dropoffCoordinates, setDropOffCoordinates] = useState([0, 0]);
 
     const getPickUpCoordinates = (pickup) => {
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${pickup}.json?` + 
@@ -59,7 +59,9 @@ const Confirm = () => {
                 <Link href="/search"><Back src="./Icons/Arrow.png"/></Link> 
             </BackContainer>
             <RideContainer>
-                <RideSelector/>
+                <RideSelector
+                pickUpCoordinates = {pickUpCoordinates}
+                dropoffCoordinates ={dropoffCoordinates} />
                 <ConfirmButtonContainer>
                     <ConfirmButton>
                         Confirm Uber X
