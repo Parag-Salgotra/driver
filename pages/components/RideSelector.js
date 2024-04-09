@@ -28,7 +28,7 @@ const RideSelector = ({pickUpCoordinates, dropoffCoordinates}) => {
             <Title>Choose a ride, or swipe for more</Title>
             <CarList>
                 { carList.map ((car)=> (
-                    <Car>
+                    <Car key={car.key}>
                         <CarImage src={car.imgUrl}/>
                         <CarDetails>
                             <Service>{car.service}</Service>
